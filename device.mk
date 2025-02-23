@@ -1,12 +1,20 @@
-#
-# Copyright (C) 2025 The LineageOS Project
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-
 LOCAL_PATH := device/lge/alphalm
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
+#AB_OTA_UPDATER := true
+#AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    system \
+    vendor \
+    vbmeta \
+    product \
+    odm \
+    system_ext \
+    vendor_boot \
+    vbmeta_system \
+    vbmeta_vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl \
@@ -97,3 +105,9 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/lge/alphalm/alphalm-vendor.mk)
+
+# Crypto
+#PRODUCT_PACKAGES += \
+    qcom_decrypt \
+    qcom_decrypt_fbe
+
