@@ -1,9 +1,2 @@
 # Android device tree for lge LM-G820 (alphalm)
-
-```
-#
-# Copyright (C) 2025 The LineageOS Project
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-```
+bugs fixing dont use
